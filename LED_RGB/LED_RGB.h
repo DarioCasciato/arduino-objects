@@ -1,1 +1,31 @@
+#include <Arduino.h>
 
+namespace Hardware
+{
+    enum activeLevel
+    {
+        LOW_ACTIVE,
+        HIGH_ACTIVE
+    };
+
+    typedef struct
+    {
+        uint8_t r;
+        uint8_t g;
+        uint8_t b;
+    } Colors_RGB;
+
+    class LED_RGB
+    {
+    private:
+        uint8_t _pin_R;
+        uint8_t _pin_G;
+        uint8_t _pin_B;
+        activeLevel _activeLevel;
+
+    public:
+        LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLevel ActiveLevel = HIGH_ACTIVE);
+        void set(Colors_RGB colors);
+        void off();
+    }
+}

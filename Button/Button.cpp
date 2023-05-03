@@ -1,9 +1,7 @@
 #include <Button.h>
 
-
-Hardware::Button* Hardware::Button::buttonList[10] = {nullptr};
+Hardware::Button *Hardware::Button::buttonList[10] = {nullptr};
 uint8_t Hardware::Button::buttonCount = 0;
-
 
 // Constructor for Button class
 Hardware::Button::Button(uint8_t pin)
