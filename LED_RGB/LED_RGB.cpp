@@ -10,25 +10,25 @@ Hardware::LED_RGB::LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLe
 }
 
 // Function to set the LED color
-Hardware::LED_RGB::set(Colors_RGB colors)
+void Hardware::LED_RGB::set(Colors_RGB color)
 {
     if (_activeLevel == COMMON_CATHODE)
     {
-        analogWrite(_pin_R, colors.r);
-        analogWrite(_pin_G, colors.g);
-        analogWrite(_pin_B, colors.b);
+        analogWrite(_pin_R, color.components.r);
+        analogWrite(_pin_G, color.components.g);
+        analogWrite(_pin_B, color.components.b);
     }
 
     if (_activeLevel == COMMON_ANODE)
     {
-        analogWrite(_pin_R, (255 - colors.r));
-        analogWrite(_pin_G, (255 - colors.g));
-        analogWrite(_pin_B, (255 - colors.b));
+        analogWrite(_pin_R, (255 - color.components.r));
+        analogWrite(_pin_G, (255 - color.components.g));
+        analogWrite(_pin_B, (255 - color.components.b));
     }
 }
 
 // Function to turn off LED
-Hardware::LED_RGB::off()
+void Hardware::LED_RGB::off()
 {
     if (_activeLevel == COMMON_CATHODE)
     {
