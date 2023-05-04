@@ -1,7 +1,7 @@
 #include <LED_RGB.h>
 
 // constructor that initializes the RGB LED pin and active level
-Hardware::LED_RGB::LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLevel ActiveLevel = HIGH_ACTIVE)
+Hardware::LED_RGB::LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLevel ActiveLevel = COMMON_CATHODE)
 {
     _pin_R = pin_r;
     _pin_G = pin_g;
@@ -12,14 +12,14 @@ Hardware::LED_RGB::LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLe
 // Function to set the LED color
 Hardware::LED_RGB::set(Colors_RGB colors)
 {
-    if (_activeLevel == HIGH_ACTIVE)
+    if (_activeLevel == COMMON_CATHODE)
     {
         analogWrite(_pin_R, colors.r);
         analogWrite(_pin_G, colors.g);
         analogWrite(_pin_B, colors.b);
     }
 
-    if (_activeLevel == LOW_ACTIVE)
+    if (_activeLevel == COMMON_ANODE)
     {
         analogWrite(_pin_R, (255 - colors.r));
         analogWrite(_pin_G, (255 - colors.g));
@@ -30,14 +30,14 @@ Hardware::LED_RGB::set(Colors_RGB colors)
 // Function to turn off LED
 Hardware::LED_RGB::off()
 {
-    if (_activeLevel == HIGH_ACTIVE)
+    if (_activeLevel == COMMON_CATHODE)
     {
         analogWrite(_pin_R, 0);
         analogWrite(_pin_G, 0);
         analogWrite(_pin_B, 0);
     }
 
-    if (_activeLevel == LOW_ACTIVE)
+    if (_activeLevel == COMMON_ANODE)
     {
         analogWrite(_pin_R, 255);
         analogWrite(_pin_G, 255);
