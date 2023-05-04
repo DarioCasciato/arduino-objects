@@ -4,8 +4,8 @@ namespace Hardware
 {
     enum activeLevel
     {
-        LOW_ACTIVE,
-        HIGH_ACTIVE
+        COMMON_ANODE,
+        COMMON_CATHODE
     };
 
     typedef struct
@@ -24,7 +24,7 @@ namespace Hardware
         activeLevel _activeLevel;
 
     public:
-        LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLevel ActiveLevel = HIGH_ACTIVE);
+        LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLevel ActiveLevel = COMMON_CATHODE);
         void set(Colors_RGB colors);
         void off();
     }
