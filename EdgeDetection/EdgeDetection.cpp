@@ -31,31 +31,31 @@ void EdgeDetection::updateEdges()
 }
 
 // Get the old state of the button
-bool EdgeDetection::getOldState()
+uint8_t EdgeDetection::getOldState()
 {
     return Edge.old;
 }
 
 // Get the current state of the button
-bool EdgeDetection::getActState()
+uint8_t EdgeDetection::getActState()
 {
     return Edge.act;
 }
 
 // Get the button edge state
-bool EdgeDetection::getEdge()
+uint8_t EdgeDetection::getEdge()
 {
     return Edge.edge;
 }
 
 // Get the positive edge of the button
-bool EdgeDetection::getEdgePos()
+uint8_t EdgeDetection::getEdgePos()
 {
     return Edge.edge_pos;
 }
 
 // Get the negative edge of the button
-bool EdgeDetection::getEdgeNeg()
+uint8_t EdgeDetection::getEdgeNeg()
 {
     return Edge.edge_neg;
 }
