@@ -21,10 +21,10 @@ public:
     void updateEdge();
     static void updateEdges();
 
-    bool getOldState();
-    bool getActState();
-    bool getEdge();
-    bool getEdgePos();
-    bool getEdgeNeg();
+    uint8_t getOldState();
+    uint8_t getActState();
+    uint8_t getEdge();
+    uint8_t getEdgePos();
+    uint8_t getEdgeNeg();
 };
 
