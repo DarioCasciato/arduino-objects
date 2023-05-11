@@ -1,7 +1,7 @@
 #include <LED_RGB.h>
 
 // constructor that initializes the RGB LED pin and active level
-Hardware::LED_RGB::LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLevel ActiveLevel = COMMON_CATHODE)
+LED_RGB::LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLevel ActiveLevel = COMMON_CATHODE)
 {
     _pin_R = pin_r;
     _pin_G = pin_g;
@@ -10,7 +10,7 @@ Hardware::LED_RGB::LED_RGB(uint8_t pin_r, uint8_t pin_g, uint8_t pin_b, activeLe
 }
 
 // Function to set the LED color
-void Hardware::LED_RGB::set(Colors_RGB color)
+void LED_RGB::set(Colors_RGB color)
 {
     if (_activeLevel == COMMON_CATHODE)
     {
@@ -28,7 +28,7 @@ void Hardware::LED_RGB::set(Colors_RGB color)
 }
 
 // Function to turn off LED
-void Hardware::LED_RGB::off()
+void LED_RGB::off()
 {
     if (_activeLevel == COMMON_CATHODE)
     {

@@ -1,12 +1,12 @@
 #include <Potentiometer.h>
 
-Hardware::Potentiometer::Potentiometer(uint8_t pin, Direction direction)
+Potentiometer::Potentiometer(uint8_t pin, Direction direction)
 {
     _pin = pin;
     _direction = direction;
 }
 
-uint16_t Hardware::Potentiometer::get()
+uint16_t Potentiometer::get()
 {
     _lastValue = analogRead(_pin);
 
@@ -17,7 +17,7 @@ uint16_t Hardware::Potentiometer::get()
         return 1023 - analogRead(_pin);
 }
 
-uint8_t Hardware::Potentiometer::getPercentage()
+uint8_t Potentiometer::getPercentage()
 {
     _lastValue = analogRead(_pin);
 
@@ -28,7 +28,7 @@ uint8_t Hardware::Potentiometer::getPercentage()
         return map(1023 - analogRead(_pin), 0, 1023, 0, 100);
 }
 
-bool Hardware::Potentiometer::hasChanged()
+bool Potentiometer::hasChanged()
 {
     if (_lastValue != analogRead(_pin))
     {
