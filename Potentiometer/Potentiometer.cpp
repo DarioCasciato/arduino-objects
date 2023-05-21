@@ -1,3 +1,7 @@
+// =========================================
+// arduino-objects | Potentiometer
+// =========================================
+
 #include <Potentiometer.h>
 
 Potentiometer::Potentiometer(uint8_t pin, Direction direction)

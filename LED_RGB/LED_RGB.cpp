@@ -1,3 +1,7 @@
+// =========================================
+// arduino-objects | LED_RGB
+// =========================================
+
 #include <LED_RGB.h>
 
 // constructor that initializes the RGB LED pin and active level

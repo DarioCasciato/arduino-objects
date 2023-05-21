@@ -1,3 +1,7 @@
+// =========================================
+// arduino-objects | EdgeDetection
+// =========================================
+
 #include <EdgeDetection.h>
 
 EdgeDetection* EdgeDetection::edgeList[10] = {nullptr};
