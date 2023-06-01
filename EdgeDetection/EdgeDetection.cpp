@@ -2,7 +2,7 @@
 // arduino-objects | EdgeDetection
 // =========================================
 
-#include <EdgeDetection.h>
+#include "EdgeDetection.h"
 
 EdgeDetection* EdgeDetection::edgeList[10] = {nullptr};
 uint8_t EdgeDetection::edgeCount = 0;
