@@ -16,14 +16,11 @@ Please refer to the specific library's documentation or examples for more detail
 
 ## Contributing
 
-Contributions to this repository are welcome! If you have additional libraries or classes to add for different Arduino components or functionalities, please follow these steps:
+Contributions to this repository are welcome! If you have additional Arduino snippets to add or would like to improve the existing ones, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch for your contribution: `git checkout -b new-library`.
-3. Implement your library or class.
-4. Add documentation and examples to showcase the usage of the library.
-5. Push your changes to your forked repository: `git push origin new-library`.
-6. Open a pull request to the main repository, describing your changes and the purpose of your contribution.
+2. Make your changes or additions.
+3. Create a pull request, providing a clear description of your changes and their purpose.
 
 ## License
 
